@@ -23,6 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2517c5b-9aee-4540-a823-1d98c6d506c6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/amunawar/aop/AOPMain.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/amunawar/aop/Circle.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/amunawar/aop/FactoryService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/amunawar/aop/LoggingAspect.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/amunawar/aop/ShapeService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/amunawar/aop/Triangle.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/amunawar/aop/FactoryService.java" />
@@ -38,10 +44,12 @@
       <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/munawar/aop/Circle.java" afterPath="$PROJECT_DIR$/src/main/java/org/amunawar/aop/Circle.java" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/munawar/aop/ShapeService.java" afterPath="$PROJECT_DIR$/src/main/java/org/amunawar/aop/ShapeService.java" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/munawar/aop/Triangle.java" afterPath="$PROJECT_DIR$/src/main/java/org/amunawar/aop/Triangle.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/target/classes/org/amunawar/springcore/Traingle.class" afterPath="$PROJECT_DIR$/target/classes/org/amunawar/springcore/Triangle.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springcore.iml" afterPath="$PROJECT_DIR$/springcore.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/springAOP.xml" afterPath="$PROJECT_DIR$/src/main/resources/springAOP.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring.xml" afterPath="$PROJECT_DIR$/target/classes/spring.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springAOP.xml" afterPath="$PROJECT_DIR$/target/classes/springAOP.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -926,12 +934,12 @@
       <option name="presentableId" value="Default" />
       <updated>1531827542867</updated>
       <workItem from="1532113163798" duration="16000" />
-      <workItem from="1532177091001" duration="4710000" />
+      <workItem from="1532177091001" duration="4747000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4726000" />
+    <option name="totallyTimeSpent" value="4763000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1924" height="1042" extended-state="0" />
@@ -955,7 +963,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29967248" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
