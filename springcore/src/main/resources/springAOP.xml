@@ -14,18 +14,28 @@
 
     <aop:aspectj-autoproxy />
 
-    <bean id="triangle" class="org.munawar.aop.Triangle">
+    <bean id="triangle" class="org.amunawar.aop.Triangle">
         <property name="name" value="Triangle"/>
     </bean>
 
 
-    <bean id="circle" class="org.munawar.aop.Circle">
+    <bean id="circle" class="org.amunawar.aop.Circle">
         <property name="name" value="Circle"/>
     </bean>
 
-    <bean id="shapeService" class="org.munawar.aop.ShapeService" autowire="byName"/>
+    <bean id="shapeService" class="org.amunawar.aop.ShapeService" autowire="byName">
+        <property name="circle" ref="circle"/>
+    </bean>
 
-    <bean  id="loggingAspect" class="org.munawar.aop.LoggingAspect"/>
+    <bean  id="loggingAspect" class="org.amunawar.aop.LoggingAspect"/>
+    
+    <aop:config>
+        <aop:aspect id="logAspect" ref="loggingAspect">
+            <aop:pointcut id="allGetters" expression="execution(* get*())"/>
+            <aop:around method="myAroundAdvice" pointcut-ref="allGetters"/>
+        </aop:aspect>
+    </aop:config>
+    
     <!--<bean id="center" class="org.amunawar.springcore.Point">-->
         <!--<property name="x" value="20" />-->
         <!--<property name="y" value="0" />-->
