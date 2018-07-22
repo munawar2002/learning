@@ -11,7 +11,7 @@ public class AOPMain {
 
 //        FactoryService factoryService = new FactoryService();
 //        ShapeService shapeService = (ShapeService) factoryService.getBean("shapeService");
-        
+
         ApplicationContext context = new ClassPathXmlApplicationContext("springAOP.xml");
         ShapeService shapeService = context.getBean("shapeService",ShapeService.class);
        // System.out.println(shapeService.getCircle().getName());
