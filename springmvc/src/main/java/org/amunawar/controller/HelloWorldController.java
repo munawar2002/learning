@@ -14,7 +14,6 @@ public class HelloWorldController  extends AbstractController{
     @Override
     protected ModelAndView handleRequestInternal(HttpServletRequest request,
                                                  HttpServletResponse response) throws Exception {
-        System.out.println("------------------------------Hello");
         ModelAndView modelAndView = new ModelAndView("HelloPage");
         modelAndView.addObject("welcomeMessage","Hi user, welcome to the project Spring MVC");
         return modelAndView;
