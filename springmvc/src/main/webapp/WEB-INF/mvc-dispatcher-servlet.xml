@@ -16,7 +16,7 @@
 
 
     <!--<context:annotation-config/>-->
-    <context:component-scan base-package="main.java.org.amunawar.controller"/>
+    <context:component-scan base-package="org.amunawar.controller"/>
 
     <mvc:annotation-driven/>
 

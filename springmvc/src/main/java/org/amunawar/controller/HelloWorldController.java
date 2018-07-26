@@ -1,4 +1,4 @@
-package main.java.org.amunawar.controller;
+package org.amunawar.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,7 +14,6 @@ import java.util.Map;
  * Created by sheik on 7/25/2018.
  */
 @Controller
-@RequestMapping("/springmvc")
 public class HelloWorldController{
 
     @RequestMapping("/welcome/{countryName}/{userName}")
