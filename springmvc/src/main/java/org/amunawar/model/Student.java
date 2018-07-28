@@ -1,5 +1,11 @@
 package org.amunawar.model;
 
+import org.amunawar.controller.IsValidHobby;
+
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -8,9 +14,17 @@ import java.util.Date;
  */
 public class Student {
 
+    @Size(min = 5,max = 10)
     private String name;
+
+    @Pattern(regexp = "[^0-9]*")
+    @IsValidHobby(listOfValidHobbies = "Music|Cricket|Football|Hockey")
     private String hobby;
+
+    @Max(200)
     private Long mobile;
+
+    @Past
     private Date dob;
     private ArrayList<String> skills;
     private Address address;

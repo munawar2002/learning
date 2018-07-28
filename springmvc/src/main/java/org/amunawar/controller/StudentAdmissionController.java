@@ -9,6 +9,10 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
+import javax.validation.Validation;
+import javax.validation.Validator;
+import javax.validation.ValidatorFactory;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -28,14 +32,14 @@ public class StudentAdmissionController {
 
     @InitBinder
     public void initBinder(WebDataBinder binder){
-        binder.setDisallowedFields(new String[]{"mobile"});
+        //binder.setDisallowedFields(new String[]{"mobile"});
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy****MM****dd");
         binder.registerCustomEditor(Date.class,"dob",new CustomDateEditor(dateFormat,false));
         binder.registerCustomEditor(String.class,"name",new StudentNameEditor());
     }
 
     @RequestMapping(value = "/submitAdmissionForm", method = RequestMethod.POST)
-    public ModelAndView submitAdmissionForm(@ModelAttribute("student") Student student,
+    public ModelAndView submitAdmissionForm(@Valid @ModelAttribute("student") Student student,
                                             BindingResult bindingResult){
         if(bindingResult.hasErrors()){
             ModelAndView model = new ModelAndView("AdmissionForm");

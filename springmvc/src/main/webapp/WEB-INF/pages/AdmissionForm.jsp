@@ -15,8 +15,7 @@
 <body>
     <h1>${headerMessage}</h1>
     <h2>Student Admission Form</h2>
-
-    <form:errors path="student.*"/>
+    <form:errors path="student.*" />
     <form action="/springmvc/submitAdmissionForm.html" method="post">
         <table>
             <tr>

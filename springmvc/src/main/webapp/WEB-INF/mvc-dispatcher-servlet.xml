@@ -18,8 +18,15 @@
     <!--<context:annotation-config/>-->
     <context:component-scan base-package="org.amunawar.controller"/>
 
-    <mvc:annotation-driven/>
 
+    <bean id="myBeansValidator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+
+    <mvc:annotation-driven validator="myBeansValidator"/>
+
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename" value="/WEB-INF/ErrorMessages"/>
+        <property name="cacheSeconds" value="1"/>
+    </bean>
 
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
