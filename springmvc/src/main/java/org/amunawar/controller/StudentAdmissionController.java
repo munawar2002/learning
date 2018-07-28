@@ -1,10 +1,16 @@
 package org.amunawar.controller;
 
+import org.amunawar.model.Student;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Controller
 public class StudentAdmissionController {
@@ -15,11 +21,28 @@ public class StudentAdmissionController {
         return modelAndView;
     }
 
+    @ModelAttribute
+    public void addCommonObjects(Model model){
+        model.addAttribute("headerMessage","Munawar's Training Program.");
+    }
+
+    @InitBinder
+    public void initBinder(WebDataBinder binder){
+        binder.setDisallowedFields(new String[]{"mobile"});
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy****MM****dd");
+        binder.registerCustomEditor(Date.class,"dob",new CustomDateEditor(dateFormat,false));
+        binder.registerCustomEditor(String.class,"name",new StudentNameEditor());
+    }
+
     @RequestMapping(value = "/submitAdmissionForm", method = RequestMethod.POST)
-    public ModelAndView submitAdmissionForm(@RequestParam(value = "studentName", defaultValue = "Munawar") String name,
-                                            @RequestParam("studentHobby") String hobby){
+    public ModelAndView submitAdmissionForm(@ModelAttribute("student") Student student,
+                                            BindingResult bindingResult){
+        if(bindingResult.hasErrors()){
+            ModelAndView model = new ModelAndView("AdmissionForm");
+            return model;
+        }
+
         ModelAndView modelAndView = new ModelAndView("AdmissionSuccess");
-        modelAndView.addObject("msg","Details Submitted are, Name: ["+name+"] and Hobby ["+hobby+"]");
         return modelAndView;
     }
 }

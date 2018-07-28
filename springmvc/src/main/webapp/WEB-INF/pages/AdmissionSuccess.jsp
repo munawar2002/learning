@@ -12,7 +12,38 @@
 </head>
 
 <body>
-    <h1>Congrats!</h1>
-    <h2>${msg}</h2>
+    <h1>${headerMessage}</h1>
+    <h2>Congrats!</h2>
+    <table>
+        <tr>
+            <td> Student Name :</td>
+            <td> ${student.name} </td>
+        </tr>
+        <tr>
+            <td> Student Hobby :</td>
+            <td> ${student.hobby} </td>
+        </tr>
+        <tr>
+            <td> Student Moblie :</td>
+            <td> ${student.mobile} </td>
+        </tr>
+        <tr>
+            <td> Student DOB :</td>
+            <td> ${student.dob} </td>
+        </tr>
+        <tr>
+            <td> Student Skills :</td>
+            <td> ${student.skills} </td>
+        </tr>
+        <tr>
+            <td>Student's Address :</td>
+            <td>Country : ${student.address.country}
+                City : ${student.address.city}
+                Street : ${student.address.street}
+                Pincode : ${student.address.pinCode}
+            </td>
+        </tr>
+
+    </table>
 </body>
 </html>
