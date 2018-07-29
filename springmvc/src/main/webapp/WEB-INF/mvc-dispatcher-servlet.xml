@@ -23,10 +23,16 @@
 
     <mvc:annotation-driven validator="myBeansValidator"/>
 
+    <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+        <property name="paramName" value="siteLanguage"/>
+    </bean>
+
     <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
-        <property name="basename" value="/WEB-INF/ErrorMessages"/>
+        <property name="basenames" value="/WEB-INF/ErrorMessages,/WEB-INF/studentmessages_en,/WEB-INF/studentmessages_fr"/>
         <property name="cacheSeconds" value="1"/>
     </bean>
+
+    <bean id="localResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver"/>
 
     <mvc:interceptors>
         <mvc:interceptor>
