@@ -13,6 +13,7 @@ import javax.validation.Valid;
 import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -21,6 +22,10 @@ public class StudentAdmissionController {
 
     @RequestMapping(value = "/admissionForm", method = RequestMethod.GET)
     public ModelAndView getAdmissionForm(){
+        String value = "null";
+        if(value.equalsIgnoreCase("null")){
+            throw new RuntimeException("Value is null");
+        }
         ModelAndView modelAndView = new ModelAndView("AdmissionForm");
         return modelAndView;
     }
