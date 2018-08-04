@@ -1,5 +1,9 @@
 package org.amunawar.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import org.amunawar.controller.IsValidHobby;
 
 import javax.validation.constraints.Max;
@@ -12,9 +16,13 @@ import java.util.Date;
 /**
  * Created by sheik on 7/28/2018.
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonIgnoreProperties({"skills","address"})
+@JsonPropertyOrder({"dob","skills","address","mobile","student_name","hobby"})
 public class Student {
 
     @Size(min = 5,max = 10)
+    @JsonProperty("student_name")
     private String name;
 
     @Pattern(regexp = "[^0-9]*")

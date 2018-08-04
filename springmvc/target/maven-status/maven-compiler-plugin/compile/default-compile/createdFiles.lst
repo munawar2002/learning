@@ -3,6 +3,7 @@ org\amunawar\controller\StudentNameEditor.class
 org\amunawar\controller\GlobalExceptionHandlerMethods.class
 org\amunawar\controller\HelloWorldController.class
 org\amunawar\controller\StudentAdmissionController.class
+org\amunawar\controller\StudentRestApiController.class
 org\amunawar\controller\DayOfWeekBasedAccessInterceptor.class
 org\amunawar\controller\HobbyValidator.class
 org\amunawar\controller\IsValidHobby.class

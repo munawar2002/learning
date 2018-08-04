@@ -22,7 +22,7 @@ public class DayOfWeekBasedAccessInterceptor extends HandlerInterceptorAdapter {
         Calendar cal = Calendar.getInstance();
         int dayOfWeek = cal.get(cal.DAY_OF_WEEK);
 
-        if(dayOfWeek == 7){
+        if(dayOfWeek == 10){
             response.getWriter().write("The website is close on Sunday. Please try accessing it on any other day of Week.");
             return false;
         }

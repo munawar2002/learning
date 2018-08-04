@@ -15,17 +15,15 @@ import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Controller
 public class StudentAdmissionController {
 
     @RequestMapping(value = "/admissionForm", method = RequestMethod.GET)
     public ModelAndView getAdmissionForm(){
-        String value = "null";
-        if(value.equalsIgnoreCase("null")){
-            throw new RuntimeException("Value is null");
-        }
         ModelAndView modelAndView = new ModelAndView("AdmissionForm");
         return modelAndView;
     }
@@ -54,4 +52,5 @@ public class StudentAdmissionController {
         ModelAndView modelAndView = new ModelAndView("AdmissionSuccess");
         return modelAndView;
     }
+
 }
