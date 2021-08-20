@@ -3,7 +3,7 @@
 https://welcome.deliveryhero.net/1st-week-after-your-arrival/
 https://wd3.myworkday.com/wday/authgwy/deliveryhero/login.htmld?redirect=n
 Username : MunawarAli
-password : Zoro#12345
+password : Z*#1*5
 
 Learning : 
 https://www.youtube.com/watch?v=96n_YpGx-JU&ab_channel=SpringDeveloper
